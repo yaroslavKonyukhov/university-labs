@@ -12,4 +12,4 @@ The algorithm works in-place, does not require additional memory, except for rec
 - It creates maxHeap with root in i. We look at the children and if one's value of them is greater than root's value, we swap them and recursively repeat the algorithm for broken branch.
 ## HeapSort function
 - Uses heapify function to turn the array into maxheap. We start creating maxHeap from the last parent (node that has at least one child, index = (n/2-1)).
-- Then we swap first element with the last element to move the largest value to the end and estore maxHeap from the start not taking into account the last element.
+- Then we swap first element with the last element to move the largest value to the end and restore maxHeap from the start not taking into account the last element.
