@@ -2,7 +2,9 @@
 HeapSort is a sorting algorithm based on a binary heap, usually a max-heap. It consists of two main steps:
 - Building a max-heap from the input array.
 - Extracting the maximum element (the root of the heap) and moving it to the end of the array, then restoring the heap properties to the rest.
+
 The algorithm works in-place, does not require additional memory, except for recursion in heapify.
+
 - Time Complexity: always O(nlogn)
 - Space Complexity: O(1)
 - Unstable (relative order of equal elements is not preserved).
