@@ -10,7 +10,7 @@
 Also there is ability to create stack with the help of two queues or queue with the help of two stacks.
 
 ## Stack From two queues
-- The idea is to move elements between queues when adding or removing, simulating the order of stack elements 
+- The idea is to move elements between queues when adding or removing, simulating the order of stack elements.
 - There are two approaches: 1) slow push, fast pop (moves elements when adding); 2) slow pop, fast push (moves elements when removing).
 ## Queue From two stack
 - The idea is to use two stacks, moving elements between them, to simulate the order of queue elements.
