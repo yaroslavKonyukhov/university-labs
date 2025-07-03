@@ -1,5 +1,5 @@
 # Adaptors
-- Adapters are data structures that provide a convenient interface to more general collections. They are like a wrapper around existing data structures. By limiting the basic data structures, they provide special functionality that is useful in different cases.
+- Adaptors are data structures that provide a convenient interface to more general collections. They are like a wrapper around existing data structures. By limiting the basic data structures, they provide special functionality that is useful in different cases.
 ## Queue
 - Queue (FIFO - First In First Out) - the first added element will be the first to remove. Implemented with the help of LinkedList.
 ## Stack
