@@ -1,1 +1,10 @@
-
+# HashTable 
+- HashTable is a data structure that let us add, remove, get elements with time complexity - O(1). To implement this it uses hashcode of the object. But order of elements is not preserved because hashTable doesn't have indexes of elements.
+- In my implementation hashTable is just array of linkedlists that contain objects of "node" class. Initially array's length is 10. So initially array consists of 10 null references of "LinkedList" type.
+- Every object has unique hashcode. When we try to put a pair of key and value to the hashTable, we take the hashcode of the key and depending on the length of the hashtable we take a number in a certain range from the end of the hashcode (hash % arr.length). So that number is the index of element in the array. If the element is null we add new LinkedList and add pair of key and value to this LinkedList. If there is already LinkedList we go through the list to check if the given key already exists, to update the value. If the given key doesn't exist we just add the pair to the list.
+- We count "size" - number of existing LinkedLists. If size == array's length we call the method "grow" to increase the length of array and we move elements to new positions because they can acquire new indices since hash codes will be calculated differently due to the increased length of the array. Еhey can remain in the same place or move to a new half of the array. We do this to prevent collisions when elements fall into the same list. Preventing collisions we save time complexity - O(1) because we decrease average amount of elements in linkedlist and going through linkedlist doesn't take a lot time.
+- When we remove element and LinkedList becomes empty we remove this LinkedList and decrease the size.
+# HashMap
+- HashMap's functionality is based on hashTable.
+# HashSet 
+- HashSet's functionality is based on hashMap. HashSet contains only unique objects. In hashMap all keys are unique. So for hashSet we store objects as keys and use null objects for the values as stub.
