@@ -7,7 +7,7 @@
 - Following the rules of BST we recursively go through the tree nodes finding a suitable place for a new node. BST doesn't contain duplicates. If the value is already exists we don't change the structure.
 ## Removing
 - Three cases are possible:
-- 1) node to be deleted doesn't have any child node - just make this node equal null.
+  1) node to be deleted doesn't have any child node - just make this node equal null.
   2) node to be deleted has one child node - make this node equal child node.
   3) node to be deleted has two child node - then we need to find min value in right subtree (my implementation) or max value in left subtree, update the value of current node with this max/min value and delete the node from which we take this max/min value.
 ## PreOrder, InOrder, PostOrder
