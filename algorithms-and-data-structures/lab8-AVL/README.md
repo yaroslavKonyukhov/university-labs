@@ -1,1 +1,17 @@
-
+# AVL (Adelson-Velsky and Landis Tree)
+- AVL - is a binary search tree (BST) which is self-balanced. Self-balanced means that difference between heights of node's subtrees equal to 0, 1, -1. This allows us to preserve O(logn) time complexity for add, remove, search operations. When we detect that difference between heights of node's subtrees is less than -1 or greater than 1, we change the structure of the tree to make the difference equal to 0, 1, -1 again. For that we use methods right/left rotation which changes the references of the nodes in such a way that structure of the tree becomes balanced.
+- AVL is good when we do a lot of search operations due to constant O(logn) time complexity. But if we do a lot of add, remove operations it's preferable to use Red-Black Tree beause it restores the structure of the tree less often, which is more productive.
+## Add method
+- We add elements the same way as we add them in BST. But in AVL every node has one additional field - height. So every time we add element we calculate the height of every node returning recursively back to the root. Height is the length of the longest path from the current node to the leaf (number of nodes/levels). When we recalculate the height for a node we check balance factor - difference between the heights of left subtree and right subtree of current node (we use getBalanceFactor() method). If the balance conditions are not met, we need to change the structure of the tree to balance it.
+- There are 4 possible states of the nodes in the moment when we change the structure:
+  1) bf > 1 and the new node was added to the left subtree of left child. We just do right rotation at grandparent node of this new node.
+  2) bf > 1 and the new node was added to the right subtree of left child (so we get "zigzag" type of structure). We first need to do left rotation at parent node of this new node to bring the tree to the first case to do right rotation at grandparent node of this new node.
+  3) bf < -1 and the new node was added to the right subtree of right child. We just do left rotation at grandparent node of this new node.
+  4) bf < -1 and the new node was added to the left subtree of right child ( again "zigzag" type of structure). We first need to do right rotation at parent node of this new node to bring the tree to the third case to do left rotation at grandparent node of this new node.
+- Then we also recursively restore the balance on the nodes above if it was disturbed.
+## Remove method
+- We remove elements the same way as we remove them in BST. After we delete the node we also recursively recalculate the heights of the nodes above and restore the balance on the nodes above if it was disturbed. The algorithm is the same as in add method. But here I detect "zigzag" type of structure in a different way. In add method I knew the value of the new node, so I could determine the dirrection of this new node - to left or right subtree of its parent node by comparing their values. Here I use "getBalanceFactor()" method to do it.
+## Right rotation method
+- y - left child of current node, b - right child of y. We make current node to become right child of y and make b to become left child of current node. Then we recalculate the heights.
+## Left rotation method
+- y - right child of current node, b - left child of y. We make current node to become left child of y and make b to become right child of current node. Then we recalculate the heights.
