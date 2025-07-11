@@ -20,6 +20,6 @@
 - All 6 cases how to fix the tree after deletion if we break one of the rules: https://miro.medium.com/v2/resize:fit:720/format:webp/1*zlA3UhMzmHrN_QCmEj3s9A.jpeg
 - I also studied the removal method on this resource (https://www.happycoders.eu/algorithms/red-black-tree-java/) and was inspired by it. But my implementation is a little different.
 ## TreeMap
-- TreeMap is a structute that allows to store pairs of keys and values but it sorts the keys in ascending order and when we print pairs of TreeMap we get them in ascending order. We can impement TreeMap based on Red-Black tree. Because time complexity is O(logn) and due to BST behavior and inorder method we can get the elements in ascending order.
+- TreeMap is a structute that allows to store pairs of keys and values but it sorts the keys in ascending order and when we print pairs of TreeMap we get them in ascending order. We can impement TreeMap based on Red-Black tree. Because time complexity is O(logn) and due to BST behavior and inorder method we can get the elements in ascending order by keys.
 ## TreeSet
 - TreeSet is based on TreeMap. TreeSet is such a data structure that contains unique values. In treeMap keys are unique so in treeSet we can use treeMap and store values as keys but for values use null objects as stub.
