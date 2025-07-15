@@ -5,7 +5,7 @@
   2) Adjacency matrix
   3) Edges list
 - Each approach has its own characteristics and is preferred depending on the needs of the task or data conditions.
-- My impementations of the graphs are non-directional and unweighted. It could be necesarry for graph to be directional or weighted for special tasks/algorithms. We just need to add flag for directional/non-directional(or make it directional by default) and change the functionality and we need to add additional field for weight for edge and also change the functionality of the methods.
+- My implementations of the graphs are non-directional and unweighted. It could be necesarry for graph to be directional or weighted for special tasks/algorithms. We just need to add flag for directional/non-directional(or make it directional by default) and change the functionality and we need to add additional field for weight for edge and also change the functionality of the methods.
 ## GraphAL - Adjacency List
 - The graph is represented as a map: each vertex maps to a list of its adjacent(connected) vertices.
 - Space complexity: O(v + e), v - number of vertices, e - number of edges.
