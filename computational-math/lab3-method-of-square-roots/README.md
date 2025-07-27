@@ -11,3 +11,4 @@
 - filling T:
 - diagonal elements: tii = sqrt(aii - sum of t^2ki (where k = 1,..., i-1))
 - off. diagonal elements: tij = 1/tii * (aij - sum of tki * tkj (where k = 1,...,i-1)).
+- I was asked also to adapt the algorithm to work with complex numbers. So I do it in "task2" method.
