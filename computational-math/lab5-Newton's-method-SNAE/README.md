@@ -18,3 +18,4 @@
 - deltaY =
 - |F'x(xn,yn), F(xn,yn)|
 - |G'x(xn,yn), G(xn,yn)|
+- If the difference between the values of the x's and y's of the last two iterations corresponds to a certain permissible error, then the iterations can be finished, since an approximate answer has been found.
