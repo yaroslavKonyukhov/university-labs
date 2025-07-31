@@ -1,1 +1,20 @@
-
+# Newton's method
+- It's used to solve systems of nonlinear algebraic equations (2 equations in one system). As a result, we get approximately x and y, which are the coordinate of the intersection of two functions.
+- The essence of the method is that we iteratively bring the initial values of x and y to the real answer. To select initial values, a graphical method is used - a graph of the functions is made and points are taken that are approximately close to the intersection of the functions.
+- For the method it is necessary to derive the derivatives of two functions from x and from y.
+- In each iteration, it will be necessary to find the Jacobian. It is important that its determinant is not equal to zero, otherwise it will be degenerate and the method will not work.
+- So we have system:
+- F(x,y) = 0
+- G(x,y) = 0
+- Jacobian formula: J(x,y) =
+- |F'x(xn,yn), F'y(xn,yn)|
+- |G'x(xn,yn), G'y(xn,yn)|
+- Formulas to find x and y:
+- Xn+1 = Xn - deltaX/J(xn,yn)
+- Yn+1 = Yn - deltaY/J(xn,yn)
+- deltaX =
+- |F(xn,yn), F'y(xn,yn)|
+- |G(xn,yn), G'y(xn,yn)|
+- deltaY =
+- |F'x(xn,yn), F(xn,yn)|
+- |G'x(xn,yn), G(xn,yn)|
