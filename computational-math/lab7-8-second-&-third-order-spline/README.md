@@ -1,1 +1,21 @@
-
+# Spline of the second and third order
+- The idea behind a spline is the same as a linear spline. Higher order splines provide greater accuracy. They also require more known points.
+- Spline of the second order(quadratic) has third order of approximation. To use it we need at least three known points/nodes.
+- Spline of the third order(cubic) has fourth order of approximation. To use it we need at least fourth known points/nodes.
+- I've written the algorithm that can do interpolation of any order. So it works for the spline of any order.
+- The algorithm is based on Newton's interpolation formulas.
+- The first formula:
+- y(x) = Pn(x) = y0 + q * deltaY0 + q(q-1)/2! * delta^2Y0 + ... + q(q-1)...(q - n + 1)/n! * delta^nY0.
+- q = (x - x0)/h
+- h = xi+1 - xi
+- deltaY = yi+1 - yi
+- delta^2Y = deltaYi+1 - deltaYi
+- The second formula:
+- y(x) = Pn(x) = yn + q * deltaYn-1 + q(q+1)/2! * delta^2Yn-2 + ... + q(q+1)...(q + n - 1)/n! * delta^nY0.
+- Remainder term R:
+- Rn(x) = h^(n+1) * (q(q-1)...(q-n))/(n+1)! * f^(n+1)(E)
+- f^(n+1) is the derivative of a function of order (n+1). E is the point at which the derivative gives its maximum value.
+- Or: Rn(x) = (delta^(n+1)Y0)/(n+1)! * q(q-1)...(q-n).
+- Remainder term R for second formula:
+- Rn(x) = h^(n+1) * (q(q+1)...(q+n))/(n+1)! * f^(n+1)(E)
+- Rn(x) = (delta^(n+1)Yn)/(n+1)! * q(q+1)...(q+n).
